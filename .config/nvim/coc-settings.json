@@ -1,0 +1,17 @@
+{
+  "coc.preferences.formatOnSave": [
+    "html",
+    "css",
+    "scss",
+    "sass",
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "python",
+    "javascriptreact",
+    "typescript.tsx"
+  ],
+  "inlayHint.enable": false,
+  "python.formatting.provider": "black"
+}
