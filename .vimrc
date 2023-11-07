@@ -18,17 +18,12 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'bfrg/vim-cpp-modern'
-Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-python/python-syntax'
+Plug 'ctrlpvim/ctrlp.vim'
 if has('nvim')
-  Plug 'kyazdani42/nvim-web-devicons'
-  Plug 'nvim-lua/plenary.nvim'
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
-	Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
-	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
 endif
 call plug#end()
 
@@ -61,12 +56,12 @@ set foldmethod=indent
 set splitbelow
 set nowrap
 set title
-set noshowmode
 set clipboard=unnamedplus
 set mouse=a
 set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkon100
 set termguicolors
 set background=dark
+set laststatus=0
 
 " Pmenu color scheme
 func! s:my_colors_setup() abort
@@ -84,12 +79,6 @@ augroup END
 let g:onedark_color_overrides = { "background": { "gui": "#000000", "cterm": "235", "cterm16": "0" } }
 colorscheme onedark
 
-" statusline
-let g:lightline = { 'colorscheme': 'darcula', 'enable': { 'tabline': 0 } }
-
-" Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files disable_devicons=true theme=dropdown<cr>
-
 " fix syntax highlighting from turning off
 autocmd BufEnter * syntax sync fromstart
 
@@ -99,7 +88,7 @@ let g:Hexokinase_highlighters = ['virtual']
 " better python syntax highlighting
 let g:python_highlight_all = 1
 
-" increase buffer size
+" increase buffer size in python file
 let g:black_linelength = 120
 
 " Use K to show documentation in preview window.
@@ -188,17 +177,3 @@ map <F5> : !gcc % && ./a.out <CR>
 
 " coc setup
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
-lua << EOF
-require("bufferline").setup{
-	options = {
-		offsets = { { filetype = "NvimTree", text = "File Explorer", } },
-    show_buffer_close_icons = false,
-	},
-}
-require('telescope').setup{
-	defaults = {
-		file_ignore_patterns = { "node_modules" },
-	},
-}
-EOF
