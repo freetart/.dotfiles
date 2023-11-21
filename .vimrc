@@ -82,6 +82,9 @@ colorscheme onedark
 " fix syntax highlighting from turning off
 autocmd BufEnter * syntax sync fromstart
 
+" fix tab conflict
+let g:UltiSnipsExpandTrigger = "<nop>"
+
 " preview colors
 let g:Hexokinase_highlighters = ['virtual']
 
