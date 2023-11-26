@@ -5,8 +5,8 @@ slstatus &
 xbanish &
 
 # system tray applets
+pasystray &
 nm-applet &
-blueman-applet &
 pnmixer &
 
 # lock screen
