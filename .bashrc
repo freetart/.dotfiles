@@ -12,6 +12,8 @@ bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 
 # aliases
+alias ls='ls -a --color=auto'
+alias ll='ls -lah --color=auto'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias trash="trash -v"
