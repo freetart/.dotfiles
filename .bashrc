@@ -18,3 +18,4 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias trash="trash -v"
 alias code="vscodium"
+alias sudo="doas"
