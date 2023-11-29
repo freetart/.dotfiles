@@ -5,7 +5,6 @@ slstatus &
 xbanish &
 
 # system tray applets
-pasystray &
 nm-applet &
 pnmixer &
 
