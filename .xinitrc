@@ -4,10 +4,6 @@
 slstatus &
 xbanish &
 
-# system tray applets
-nm-applet &
-pnmixer &
-
 # lock screen
 xautolock -time 30 -locker slock &
 
