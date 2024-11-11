@@ -27,8 +27,12 @@ filetype plugin on
 filetype indent off
 syntax on
 set nocompatible
-set tabstop=2 softtabstop=2
-set shiftwidth=2
+set autoindent
+set smartindent
+set cindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
 set exrc
 set relativenumber
 set nu
