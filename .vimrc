@@ -73,6 +73,12 @@ augroup END
 let g:onedark_color_overrides = { "background": { "gui": "#000000", "cterm": "235", "cterm16": "0" } }
 colorscheme onedark
 
+" Enable syntax highlighting for .asm, .s, .S files
+augroup AssemblySyntax
+  autocmd!
+  autocmd BufRead,BufNewFile *.asm,*.s,*.S set filetype=asm
+augroup END
+
 " fix syntax highlighting from turning off
 autocmd BufEnter * syntax sync fromstart
 
