@@ -1,11 +1,11 @@
 " plugins (vim plug)
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'sheerun/vim-polyglot'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-fugitive'
 Plug 'SirVer/ultisnips'
-Plug 'mlaursen/vim-react-snippets'
 Plug 'leafOfTree/vim-matchtag'
 Plug 'alvan/vim-closetag'
 Plug 'AndrewRadev/tagalong.vim'
@@ -14,10 +14,8 @@ Plug 'matze/vim-move'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
-Plug 'bfrg/vim-cpp-modern'
 Plug 'joshdick/onedark.vim'
 Plug 'preservim/nerdtree'
-Plug 'vim-python/python-syntax'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
