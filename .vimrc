@@ -3,10 +3,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
-Plug 'styled-components/vim-styled-components'
-Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-fugitive'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
 Plug 'mlaursen/vim-react-snippets'
 Plug 'leafOfTree/vim-matchtag'
 Plug 'alvan/vim-closetag'
@@ -14,7 +12,6 @@ Plug 'AndrewRadev/tagalong.vim'
 Plug 'amadeus/vim-convert-color-to'
 Plug 'matze/vim-move'
 Plug 'jiangmiao/auto-pairs'
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'bfrg/vim-cpp-modern'
@@ -22,9 +19,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'preservim/nerdtree'
 Plug 'vim-python/python-syntax'
 Plug 'ctrlpvim/ctrlp.vim'
-if has('nvim')
-  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
-endif
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
 " basic sets
@@ -110,15 +105,6 @@ nmap <silent> gd <Plug>(coc-definition)
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-b> :bprev<CR>
 
-" set filetypes as typescriptreact
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
-
-" keep cursor centered
-augroup KeepCentered
-  autocmd!
-  autocmd CursorMoved * normal! zz
-augroup END
-
 " disables automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
@@ -136,7 +122,7 @@ let g:prettier#autoformat_require_pragma = 0
 
 " nerd tree settings
 nnoremap <C-t> :NERDTreeToggle<CR>
-let g:NERDTreeWinSize = 35
+let g:NERDTreeWinSize = 25
 let g:NERDTreeShowHidden = 1
 
 " fix indentation issue
@@ -172,8 +158,9 @@ let g:closetag_close_shortcut = '<leader>>'
 autocmd FileType javascript map <buffer> <Leader>r :w<CR>:term "node" %<CR>
 autocmd FileType javascript imap <buffer> <Leader>r <esc>:w<CR>:term "node" %<CR>
 
-" compile & run c program
-map <F5> : !gcc % && ./a.out <CR>
-
 " coc setup
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" disable warning
+let g:coc_disable_startup_warning = 1
+

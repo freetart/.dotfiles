@@ -20,3 +20,7 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias trash="trash -v"
 alias code="vscodium"
+alias vim='/usr/bin/vim'
+
+# default editor
+EDITOR="vim"
