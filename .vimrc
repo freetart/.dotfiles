@@ -47,13 +47,10 @@ set shortmess+=c
 set encoding=utf-8
 set complete+=kspell
 set nofoldenable
-set foldmethod=indent
 set splitbelow
 set nowrap
 set title
-set clipboard=unnamedplus
 set mouse=a
-set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkon100
 set termguicolors
 set background=dark
 set laststatus=0
@@ -76,9 +73,6 @@ colorscheme onedark
 
 " fix syntax highlighting from turning off
 autocmd BufEnter * syntax sync fromstart
-
-" preview colors
-let g:Hexokinase_highlighters = ['virtual']
 
 " better python syntax highlighting
 let g:python_highlight_all = 1
@@ -153,10 +147,6 @@ let g:closetag_regions = {
     \ }
 let g:closetag_shortcut = '>'
 let g:closetag_close_shortcut = '<leader>>'
-
-" run node programs by pressing leader + r
-autocmd FileType javascript map <buffer> <Leader>r :w<CR>:term "node" %<CR>
-autocmd FileType javascript imap <buffer> <Leader>r <esc>:w<CR>:term "node" %<CR>
 
 " coc setup
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
