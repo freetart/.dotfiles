@@ -25,3 +25,4 @@ alias vim="/usr/bin/vim"
 export PS1=${TITLE}${PROMPT}
 export EDITOR="vim"
 export VISUAL="vim"
+export PATH="$HOME/.cargo/bin:$PATH"
