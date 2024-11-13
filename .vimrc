@@ -56,6 +56,7 @@ set mouse=a
 set termguicolors
 set background=dark
 set laststatus=0
+set clipboard=unnamedplus
 
 " Pmenu color scheme
 func! s:my_colors_setup() abort
