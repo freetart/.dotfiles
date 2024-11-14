@@ -17,7 +17,6 @@ Plug 'tpope/vim-commentary'
 Plug 'joshdick/onedark.vim'
 Plug 'preservim/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'vim-scripts/LargeFile'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
