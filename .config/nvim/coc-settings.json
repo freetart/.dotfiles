@@ -1,0 +1,22 @@
+{
+  "coc.preferences.formatOnSave": [
+    "html",
+    "css",
+    "scss",
+    "sass",
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "python",
+    "javascriptreact",
+    "typescript.tsx"
+  ],
+  "inlayHint.enable": false,
+  "python.formatting.provider": "autopep8",
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/18.1.3/clangd_18.1.3/bin/clangd",
+  "asm-lsp": {
+    "command": "asm-lsp",
+    "filetypes": ["asm", "s", "S"]
+  }
+}

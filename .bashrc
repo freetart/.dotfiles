@@ -19,10 +19,10 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias trash="trash -v"
 alias code="vscodium"
-alias vim="/usr/bin/vim"
+alias vim="nvim"
 
 # exports
 export PS1=${TITLE}${PROMPT}
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 export PATH="$HOME/.cargo/bin:$PATH"
