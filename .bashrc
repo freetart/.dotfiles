@@ -21,6 +21,13 @@ alias trash="trash -v"
 alias code="vscodium"
 alias vim="nvim"
 
+# fix xfce4-terminal gap
+if [ "$DISPLAY" ]; then
+ activ_win_id=`xprop -root _NET_ACTIVE_WINDOW`
+ activ_win_id=$(echo $activ_win_id | awk '{ activ_win_id=substr($0,41,9); print activ_win_id; }' )
+ xprop -id $activ_win_id -remove WM_NORMAL_HINTS
+fi
+
 # exports
 export PS1=${TITLE}${PROMPT}
 export EDITOR="nvim"
