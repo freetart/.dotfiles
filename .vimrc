@@ -1,7 +1,7 @@
 " plugins (vim plug)
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-+Plug 'bfrg/vim-c-cpp-modern'
+Plug 'bfrg/vim-c-cpp-modern'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-fugitive'
