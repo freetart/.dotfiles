@@ -57,6 +57,7 @@ set termguicolors
 set background=dark
 set laststatus=0
 set clipboard=unnamedplus
+set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkon100
 
 " Pmenu color scheme
 func! s:my_colors_setup() abort
