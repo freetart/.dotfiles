@@ -5,7 +5,6 @@ Plug 'bfrg/vim-c-cpp-modern'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-fugitive'
-Plug 'SirVer/ultisnips'
 Plug 'leafOfTree/vim-matchtag'
 Plug 'alvan/vim-closetag'
 Plug 'AndrewRadev/tagalong.vim'
@@ -119,10 +118,6 @@ let g:move_key_modifier_visualmode = 'C'
 " emmet remap
 let g:user_emmet_mode='n'
 let g:user_emmet_leader_key=','
-
-" prettier auto format
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
 
 " nerd tree settings
 nnoremap <C-t> :NERDTreeToggle<CR>

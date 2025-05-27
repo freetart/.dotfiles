@@ -19,7 +19,7 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias trash="trash -v"
 alias code="vscodium"
-alias vim="nvim"
+alias vi="vim"
 
 # fix xfce4-terminal gap
 if [ "$DISPLAY" ]; then
@@ -30,6 +30,6 @@ fi
 
 # exports
 export PS1=${TITLE}${PROMPT}
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR="vim"
+export VISUAL="vim"
 export PATH="$HOME/.cargo/bin:$PATH"
