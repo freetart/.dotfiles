@@ -1,7 +1,7 @@
 #!bin/bash
 
-# neofetch on startup
-neofetch
+# fastfetch on startup
+fastfetch
 
 # prompt
 TITLE="\[\033]0;\w\007\]"
@@ -21,15 +21,19 @@ alias trash="trash -v"
 alias code="vscodium"
 alias vi="vim"
 
-# fix xfce4-terminal gap
-if [ "$DISPLAY" ]; then
- activ_win_id=`xprop -root _NET_ACTIVE_WINDOW`
- activ_win_id=$(echo $activ_win_id | awk '{ activ_win_id=substr($0,41,9); print activ_win_id; }' )
- xprop -id $activ_win_id -remove WM_NORMAL_HINTS
-fi
+man() {
+  LESS_TERMCAP_md=$'\e[01;31m' \
+  LESS_TERMCAP_me=$'\e[0m' \
+  LESS_TERMCAP_se=$'\e[0m' \
+  LESS_TERMCAP_so=$'\e[01;44;33m' \
+  LESS_TERMCAP_ue=$'\e[0m' \
+  LESS_TERMCAP_us=$'\e[01;32m' \
+  command man "$@"
+}
 
 # exports
 export PS1=${TITLE}${PROMPT}
+export PAGER="less"
 export EDITOR="vim"
 export VISUAL="vim"
 export PATH="$HOME/.cargo/bin:$PATH"
