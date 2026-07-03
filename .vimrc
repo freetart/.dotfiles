@@ -15,6 +15,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'joshdick/onedark.vim'
 Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
@@ -23,6 +24,7 @@ call plug#end()
 filetype plugin on
 filetype indent off
 syntax on
+set showmode
 set nocompatible
 set autoindent
 set smartindent
@@ -123,6 +125,7 @@ let g:user_emmet_leader_key=','
 nnoremap <C-t> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize = 25
 let g:NERDTreeShowHidden = 1
+let g:webdevicons_enable_nerdtree = 1
 
 " fix indentation issue
 inoremap <expr> <CR> InsertMapForEnter()
