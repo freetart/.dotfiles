@@ -1,2 +1,3 @@
 .vim/plugged/*
 .vim/undodir/*
+.config/ranger/plugins/__pycache__/*
