@@ -17,6 +17,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tomasiser/vim-code-dark'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
@@ -74,7 +75,14 @@ augroup END
 
 " theme
 let g:onedark_color_overrides = { "background": { "gui": "#000000", "cterm": "235", "cterm16": "0" } }
-colorscheme onedark
+colorscheme codedark
+
+" Force black background for main area and sidebars
+highlight Normal guibg=#000000 ctermbg=black
+highlight SignColumn guibg=#000000 ctermbg=black
+highlight FoldColumn guibg=#000000 ctermbg=black
+highlight LineNr guibg=#000000 ctermbg=black guifg=#555555 ctermfg=darkgrey
+highlight EndOfBuffer guibg=#000000 ctermbg=black
 
 " Enable syntax highlighting for .asm, .s, .S files
 augroup AssemblySyntax
